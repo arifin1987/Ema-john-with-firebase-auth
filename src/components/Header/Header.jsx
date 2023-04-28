@@ -24,10 +24,10 @@ const Header = () => {
                 <Link to="/login">Login</Link>
                 <Link to="/signup">Sign Up</Link>
                 {
-                    user && user.displayName
+                    user && <span className='text-white'>{user.email} <button onClick={handleLogout}>Sign Out</button></span> 
                     
                 }
-                <button onClick={handleLogout}>Log out</button>
+                
             </div>
         </nav>
     );
